@@ -1,0 +1,74 @@
+[
+    {
+        "id":1,
+        "title":" Details View",
+        "header":" Details View",
+        "content":"Where innovation and reality blend to give you the best development solutions for business and personal use",
+        "link":"See Profile",
+        "color":"bg-success card-header text-white pointer",
+        "active":false
+    },
+    {
+        "id":2,
+        "title":" Details View",
+        "header":" Details View",
+        "content":"Where innovation and reality blend to give you the best development solutions for business and personal use",
+        "link":"See Profile",
+        "color":"bg-primary card-header text-white pointer",
+        "active":false
+    },
+    {
+        "id":3,
+        "title":" Details View",
+        "header":" Details View",
+        "content":"Where innovation and reality blend to give you the best development solutions for business and personal use",
+        "link":"See Profile",
+        "color":"bg-dark card-header text-white pointer",
+        "active":false
+    },
+    {
+        "id":4,
+        "title":" Details View",
+        "header":" Details View",
+        "content":"Where innovation and reality blend to give you the best development solutions for business and personal use",
+        "link":"See Profile",
+        "color":"bg-secondary card-header text-white pointer",
+        "active":false
+    },
+    {
+        "id":5,
+        "title":" Details View",
+        "header":" Details View",
+        "content":"Where innovation and reality blend to give you the best development solutions for business and personal use",
+        "link":"See Profile",
+        "color":"bg-info card-header text-white pointer",
+        "active":false
+    },
+    {
+        "id":6,
+        "title":" Details View",
+        "header":" Details View",
+        "content":"Where innovation and reality blend to give you the best development solutions for business and personal use",
+        "link":"See Profile",
+        "color":"bg-warning card-header text-white pointer",
+        "active":false
+    },
+    {
+        "id":7,
+        "title":" Details View",
+        "header":" Details View",
+        "content":"Where innovation and reality blend to give you the best development solutions for business and personal use",
+        "link":"See Profile",
+        "color":"bg-success card-header text-white pointer",
+        "active":false
+    },
+    {
+        "id":8,
+        "title":" Details View",
+        "header":" Details View",
+        "content":"Where innovation and reality blend to give you the best development solutions for business and personal use",
+        "link":"See Profile",
+        "color":"bg-dark card-header text-white pointer",
+        "active":false
+    }
+]

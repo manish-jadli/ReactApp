@@ -1,0 +1,65 @@
+[
+    {
+        "id":1,
+        "title":"The href attribute requires a valid value to be accessible.",
+        "header":"Detail View",
+        "content":"The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md",
+        "link":"See Profile",
+        "color":"bg-warning card-header text-white pointer",
+        "active":false
+    },
+    {
+        "id":2,
+        "title":"The href attribute requires a valid value to be accessible.",
+        "header":"Detail View",
+        "content":"The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md",
+        "link":"See Profile",
+        "color":"bg-info card-header text-white pointer",
+        "active":false
+    },
+    {
+        "id":3,
+        "title":"The href attribute requires a valid value to be accessible.",
+        "header":"Detail View",
+        "content":"The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md",
+        "link":"See Profile",
+        "color":"bg-danger card-header text-white pointer",
+        "active":false
+    },
+    {
+        "id":4,
+        "title":"The href attribute requires a valid value to be accessible.",
+        "header":"Detail View",
+        "content":"The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md",
+        "link":"See Profile",
+        "color":"bg-dark card-header text-white pointer",
+        "active":false
+    },
+    {
+        "id":5,
+        "title":"The href attribute requires a valid value to be accessible.",
+        "header":"Detail View",
+        "content":"The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md",
+        "link":"See Profile",
+        "color":"bg-default card-header text-dark pointer",
+        "active":false
+    },
+    {
+        "id":6,
+        "title":"The href attribute requires a valid value to be accessible.",
+        "header":"Detail View",
+        "content":"The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md",
+        "link":"See Profile",
+        "color":"bg-success card-header text-white pointer",
+        "active":false
+    },
+    {
+        "id":7,
+        "title":"The href attribute requires a valid value to be accessible.",
+        "header":"Detail View",
+        "content":"The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md",
+        "link":"See Profile",
+        "color":"bg-info card-header text-white pointer",
+        "active":false
+    }
+]

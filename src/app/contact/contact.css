@@ -1,0 +1,9 @@
+
+  
+    .card .collapse {
+      display: none
+    }
+  
+    .card .collapse.in {
+      display: block
+    }

@@ -1,0 +1,111 @@
+{
+  "contactDatas": [
+    {
+      "id": 1,
+      "username": "manish jadli",
+      "email": "manishirasys@gmail.com",
+      "address": "Noida, Indrapuram",
+      "feedback": "Good for React Developer.",
+      "active": true
+    },
+    {
+      "id": 2,
+      "username": "pushkar thapliyal",
+      "email": "pushkarirasys@gmail.com",
+      "address": "Noida, Indrapuram",
+      "feedback": "Good for React Developer.",
+      "active": true
+    },
+    {
+      "id": 3,
+      "username": "vikram adhikari",
+      "email": "vikramirasys@gmail.com",
+      "address": "Noida, Indrapuram",
+      "feedback": "Good for React Developer.",
+      "active": true
+    }
+  ],
+  "courseDatas": [
+    {
+      "id": 4,
+      "courseid": "4",
+      "coursename": "Polytechnic",
+      "coursefromdate": "07/05/2019",
+      "coursetodate": "10/07/2019",
+      "coursefee": 35000,
+      "courseimage": "C:\\fakepath\\courier3.jpg",
+      "active": false
+    },
+    {
+      "id": 5,
+      "courseid": "5",
+      "coursename": "BBA",
+      "coursefromdate": "07/05/2019",
+      "coursetodate": "10/07/2019",
+      "coursefee": 40000,
+      "courseimage": "C:\\fakepath\\courier3.jpg",
+      "active": false
+    },
+    {
+      "courseid": "7",
+      "coursename": "MSC",
+      "coursefromdate": "2019-07-09",
+      "coursetodate": "2021-10-19",
+      "coursefee": "25000",
+      "courseimage": "C:\\fakepath\\bell.png",
+      "id": 9
+    }
+  ],
+  "userStores": [
+    {
+      "id": 1,
+      "selectedFile": "https://i.imgur.com/4EMtxHB.png",
+      "img": "https://i.imgur.com/4EMtxHB.png",
+      "name": "Manish",
+      "age": 27,
+      "role": "Admin",
+      "description": "Admin user",
+      "active": false
+    },
+    {
+      "id": 2,
+      "selectedFile": "https://i.imgur.com/4EMtxHB.png",
+      "img": "https://i.imgur.com/4EMtxHB.png",
+      "name": "Chetram",
+      "age": 27,
+      "role": "Admin",
+      "description": "Admin user",
+      "active": false
+    },
+    {
+      "id": 3,
+      "selectedFile": "https://i.imgur.com/4EMtxHB.png",
+      "img": "https://i.imgur.com/4EMtxHB.png",
+      "name": "Abhishek",
+      "age": 27,
+      "role": "Admin",
+      "description": "Admin user",
+      "active": false
+    },
+    {
+      "id": 4,
+      "selectedFile": "https://i.imgur.com/4EMtxHB.png",
+      "img": "https://i.imgur.com/4EMtxHB.png",
+      "name": "Prakash",
+      "age": 27,
+      "role": "Admin",
+      "description": "Admin user",
+      "active": false
+    },
+    {
+      "courseid": 5,
+      "selectedFile": "https://i.imgur.com/4EMtxHB.png",
+      "img": "https://i.imgur.com/4EMtxHB.png",
+      "name": "Brijesh",
+      "age": 27,
+      "role": "Admin",
+      "description": "Admin user",
+      "active": false
+    }
+  ]
+}

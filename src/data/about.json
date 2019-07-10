@@ -1,0 +1,51 @@
+[
+    {
+        "id":1,
+        "title":"ABOUT MJTECH",
+        "header":"ABOUT MJTECH",
+        "content":"Where innovation and reality blend to give you the best development solutions for business and personal use",
+        "link":"See Profile",
+        "color":"bg-success card-header text-white pointer",
+        "active":false
+    },
+    
+    {
+        "id":2,
+        "title":"Our Business Philosophy",
+        "header":"Our Business Philosophy",
+        "content":"We understand that customer needs should always come first, and that’s why we adopted the philosophy that: “We don’t work for you, we work with you…” This operational blueprint has helped us create a wide range of software products that continue to shape businesses and individual lives of clients around the world. Individualizing client focus has also helped us to grow in the same measure as all our thousands of clients have.",
+        "link":"See Profile",
+        "color":"bg-dark card-header text-white pointer",
+        "active":false
+    },
+    
+    {
+        "id":3,
+        "title":"Our Quality Policy",
+        "header":"Our Quality Policy",
+        "content":"Being an ISO certified software Development Company, IraSys continues to pursue quality standards so that we may not only retain the good reputation, but also give our clients the best. Our dedication to quality is defined by evidence-based decision-making, constant improvement, engagement of people, relationship management, process approach, leadership, and customer focus.",
+        "link":"See Profile",
+        "color":"bg-primary card-header text-white pointer",
+        "active":false
+    },
+    
+    {
+        "id":4,
+        "title":"The Future",
+        "header":"The Future",
+        "content":"Newer forms of technology are lighting up the way for building better and bigger software realities. At IraSys, we are positive about the future. Every time something new comes up, you will know about it from us as we continue to exploit every opportunity to upgrade our products to suit all clients. We are also opening our doors to the possibility of partnerships to extend our reach to what tomorrow has to offer.",
+        "link":"See Profile",
+        "color":"bg-secondary card-header text-white pointer",
+        "active":false
+    },
+    
+    {
+        "id":5,
+        "title":"Our Mission and Vision",
+        "header":"Our Mission and Vision",
+        "content":"Mission Statement: Our mission is to inspire you to reach greater heights in making life better for yourself and others Vision Statement: To offer the best tailor-made software solutions for today and the future. IraSys’s key operating principals have proven themselves to successfully deliver technological solutions.",
+        "link":"See Profile",
+        "color":"bg-info card-header text-white pointer",
+        "active":false
+    }
+]
