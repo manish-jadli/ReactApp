@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class GetService extends React.Component{
   constructor(props){
     super(props);
@@ -16,8 +17,13 @@ class GetService extends React.Component{
     }
   }
     render(){
-let getserviceDatas=this.state.getserviceDatas;
+//let getserviceDatas=this.state.getserviceDatas;
         return(
+
+          <section>
+
+
+
 <section>
                   <div className="modal" id="getService">
   <form className="was-validated">
@@ -77,6 +83,9 @@ let getserviceDatas=this.state.getserviceDatas;
   
 
             </section>
+        
+        </section>
+        
         )
     }
 }

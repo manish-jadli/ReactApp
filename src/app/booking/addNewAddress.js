@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class AddNewAddres extends React.Component{
   constructor(props){
     super(props);
@@ -9,8 +10,12 @@ class AddNewAddres extends React.Component{
     render(){
 
         return(
+
+            <section>
+
+
 <section>
-                  <div className="modal" id="addAddressBook">
+                  <div className="modal zindex-2" id="addAddressBook">
   <form>
     <div className="modal-dialog modal-lg" id="getservice-font">
       <div className="modal-content">
@@ -162,7 +167,10 @@ class AddNewAddres extends React.Component{
   
 
             </section>
-        )
+       
+       </section>
+       
+       )
     }
 }
 

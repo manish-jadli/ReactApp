@@ -1,7 +1,7 @@
-/* @font-face {
+@font-face {
   font-family: RobotoSlabThin;
   src: url('./data/font-family/RobotoSlab-Thin.ttf');
-} */
+}
 @media (min-width: 992px){
 .modal-lg, .modal-xl {
     max-width: 1024px;
@@ -44,6 +44,11 @@ h3 > span{
     color: #fff;
     font-weight: 800;
   }
+
+  #pageNotFound > span{
+    border-bottom:2px solid #505050;
+  }
+
   .bookingHeader a, .bookingHeader a:hover{
     color: #fff;
   }
@@ -55,6 +60,9 @@ h3 > span{
     color: white;
 }
 
+.zindex-2{
+  z-index: 1060;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

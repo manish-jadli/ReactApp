@@ -51,6 +51,10 @@ feedbackHandler(e){
 render(){
 
     return(
+
+        <section>
+
+
 <section>
 <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
@@ -106,6 +110,8 @@ render(){
                     </div>
                 </div>
             </div>
+
+</section>
 
 </section>
 

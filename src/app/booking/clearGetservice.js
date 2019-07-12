@@ -3,6 +3,9 @@ import React from 'react';
 class ClearGetService extends React.Component{
     render(){
         return(
+
+          <section>
+
             <section>
               <div className="modal" id="clearGetService">
               <form className="was-validated">
@@ -22,7 +25,7 @@ class ClearGetService extends React.Component{
 
                 <div className="modal-footer">
                     <div className="float-left">
-        <button type="button" className="btn btn-success">Yes</button>
+        <button type="button" className="btn btn-success" data-dismiss="modal">Yes</button>
         </div>
         <div className="float-right">
           <button type="button" className="btn btn-danger" data-dismiss="modal">No</button>
@@ -35,7 +38,10 @@ class ClearGetService extends React.Component{
               
             
                         </section>
-                    )
+                   
+                   </section>
+                   
+                   )
     }
 }
 

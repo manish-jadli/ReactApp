@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Helmet} from 'react-helmet';
 import '../service/service.css';
 import serviceData from '../../data/service.json';
 import { Link} from 'react-router-dom'
@@ -9,11 +10,18 @@ class Service extends React.Component {
  render(){
   return (
 
+<section>
 
+                <Helmet>
+                <title>Service</title>
+                <meta charset="UTF-8" />
+                <meta name="description" content="MjTech Service" />
+                <meta name="keywords" content="Service, Services, MjTech" />
+                </Helmet>
 
     <section className="container">
          <div id="pageNotFound">
-    Services
+    <span>Services</span>
     </div>
 
 <div className="col-12 clearfix">
@@ -57,6 +65,10 @@ class Service extends React.Component {
 
 
 </section>
+  
+
+  </section>
+  
   );
 }
 }

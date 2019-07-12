@@ -76,6 +76,10 @@ class Login extends React.Component {
         render(){
           let datas=this.state.datas;
             return(
+              <section>
+
+  
+
                 <section>
                 
                 <div className="modal" id="login">
@@ -146,6 +150,7 @@ class Login extends React.Component {
 
               </section>
 
+                </section>
             );
 
         }

@@ -1,31 +1,39 @@
 import React from 'react';
+import {Helmet} from 'react-helmet';
 import { Link} from 'react-router-dom';
 import axios from 'axios';
 import '../courses/courses.css';
 import CoursesData from '../../data/courses.json';
 import Modal from './courseAddEdit';
 import {Dropdown} from 'react-bootstrap';
+import CourseShow from './courseShow';
+
 
 
 class Courses extends React.Component {
   constructor(props) {
     super(props);
     this.state = { courseDetail: CoursesData, act:0, active:false, courseFormDatas:[
-      {courseid:'123',coursename:'B.TECH',coursefromdate:'07/05/2019',coursetodate:'10/7/2019',coursefee:'45000',courseimage:'btech.png'}
+      {id:'',coursename:'Manish',coursefromdate:'',coursetodate:'',coursefee:'',courseimage:null}
     ],  requiredItem: 0 };
     this.courseSubmit=this.courseSubmit.bind(this);
     this.replaceModalItem = this.replaceModalItem.bind(this);
     this.saveModalDetails = this.saveModalDetails.bind(this);
+    this.onChange = this.onChange.bind(this);
+    this.resetFile = this.resetFile.bind(this);
+
+       
   }
+
 
   home = () => {
     alert('You have redirect to home screen.');
     this.props.history.push("");
   };
 
-  replaceModalItem(courseid) {
+  replaceModalItem(index) {
     this.setState({
-      requiredItem: courseid
+      requiredItem: index
     });
   }
 
@@ -36,15 +44,17 @@ class Courses extends React.Component {
     this.setState({ courseFormDatas: tempbrochure });  
   }
 
-  deleteItem(courseid) {
+  deleteItem=(id)=> {
+    alert('You have deleted this record for this id' + `${id}`);
     // let tempBrochure = this.state.courseFormDatas;
     // tempBrochure.splice(index, 1);
-    axios.delete(`http://localhost:3000/courseDatas/${courseid}`)
+    // this.setState({ courseFormDatas: tempBrochure });
+    axios.delete(`http://localhost:3000/courseDatas/${id}`)
     .then(res => {
       console.log(res);
       console.log(res.data);
     })
-    // this.setState({ courseFormDatas: tempBrochure });
+  
   }
 
   toggle() {
@@ -58,13 +68,13 @@ class Courses extends React.Component {
     e.preventDefault();
     let courseFormDatas= this.state.courseFormDatas;
 
-  let courseid=this.refs.courseid.value;
+  let id=this.refs.id.value;
   let coursename=this.refs.coursename.value;
   let coursefromdate=this.refs.coursefromdate.value;
   let coursetodate=this.refs.coursetodate.value;
   let coursefee=this.refs.coursefee.value;
   let courseimage=this.refs.courseimage.value;
-  let couseformdata={courseid,coursename,coursefromdate,coursetodate,coursefee,courseimage};
+  let couseformdata={id,coursename,coursefromdate,coursetodate,coursefee,courseimage};
   
   axios.post('http://localhost:3000/courseDatas/',couseformdata)
     .then(res=>{
@@ -82,7 +92,7 @@ class Courses extends React.Component {
   }
 
   componentDidUpdate(){
-    let courseFormDatas= this.state.courseFormDatas;
+    const courseFormDatas= this.state.courseFormDatas;
     console.log(courseFormDatas);
   }
 
@@ -95,24 +105,19 @@ class Courses extends React.Component {
     });
   }
 
-  // fileSelectedHandler=event=>{
-  //   this.setState({
-  //     selectedFile:event.target.files[0]
-  //   })
-  // }
+  onChange(event) {
+    this.setState({
+      file: URL.createObjectURL(event.target.files[0])
+    });
+  }
 
-  // fileUploadHandler=()=>{
-  //   const fd=new FormData(this.courseFormDatas);
-  //   fd.append('image', this.state.selectedFile, this.state.selectedFile.name);
-  //   axios.post('http://localhost:3000/courseDatas/',fd,{
-  //     onUploadProgress:ProgressEvent=>{
-  //       console.log('Upload Progress ' + Math.round(ProgressEvent.loaded / ProgressEvent.total * 100) + '%')
-  //     }
-  //   })
-  //   .then(res=>{
-  //     console.log(res);
-  //   });
-  // }
+  resetFile(event) {
+    event.preventDefault();
+    this.setState({ file: null });
+  }
+
+
+
  
     render() {
 
@@ -120,14 +125,22 @@ class Courses extends React.Component {
      
 const course = this.state.courseFormDatas.map((item, index) => {
       return (
-              <div className="row col-12" key={index}>
-              <div className="col-1"><Link to={`/courses/${item.courseid}`}>{item.courseid}</Link></div>
+
+        <div className="form-group" key={index}>
+              <div className="row col-12">
+              <div className="col-1"><Link to={ {
+  pathname: `/courses/${item.id}`,
+  search: '?sort=asc',
+  hash: '#hash',
+  state: { courseFormDatas: true }
+} }>{item.id}</Link></div>
               <div className="col-2">{item.coursename}</div>
               <div className="col-2">{item.coursefromdate}</div>
               <div className="col-2">{item.coursetodate}</div>
               <div className="col-2">{item.coursefee}</div>
               <div className="col-2">
-                <img src={item.courseimage} className="thumbnail m-b-2" width="150px" height="50px"/>
+                {/* <img src={item.courseimage} className="thumbnail m-b-2" width="150px" height="50px"/> */}
+                {item.courseimage}
               </div>
               <div className="col-1">
               <Dropdown>
@@ -136,12 +149,13 @@ const course = this.state.courseFormDatas.map((item, index) => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item data-toggle="modal" data-target="#exampleModal" onClick={() => this.replaceModalItem(item.courseid)}>Edit</Dropdown.Item>
-              <Dropdown.Item onClick={() => this.deleteItem(item.courseid)}>Delete</Dropdown.Item>
+              <Dropdown.Item data-toggle="modal" data-target="#exampleModal" onClick={() => this.replaceModalItem(index)}>Edit</Dropdown.Item>
+              <Dropdown.Item onClick={() => this.deleteItem(item.id)}>Delete</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
               </div>
-              </div>     
+              </div>
+              </div>
       )
     });
     
@@ -149,10 +163,19 @@ const course = this.state.courseFormDatas.map((item, index) => {
     const requiredItem = this.state.requiredItem;
     let modalData = this.state.courseFormDatas[requiredItem];
     return (
+    <section>
+
+                <Helmet>
+                <title>Courses</title>
+                <meta charset="UTF-8" />
+                <meta name="description" content="MjTech Course" />
+                <meta name="keywords" content="Course, MjTech" />
+                </Helmet>
+
       <div>
               <div className="container">
     <div id="pageNotFound">
-    Courses
+    <span>Courses</span>
     </div>
 
     <div className="col-12 form-group">
@@ -166,9 +189,9 @@ const course = this.state.courseFormDatas.map((item, index) => {
 
   <div className="col-6 form-group">
     <div className="row">
-    <label className="control-label col-4 lh-34">Course Id</label>
+    <label className="control-label col-4 lh-34">Id</label>
     <div className="col-8">
-      <input type="number" ref="courseid" className="form-control" placeholder="Course Id" required />
+      <input type="number" ref="id" className="form-control" placeholder="Id" required />
     </div>
     </div>
   </div>
@@ -213,7 +236,25 @@ const course = this.state.courseFormDatas.map((item, index) => {
     <div className="row">
     <label className="control-label col-4 lh-34">Image</label>
     <div className="col-8">
-      <input type="file" ref="courseimage" className="form-control" placeholder="Image" required onChange={this.fileSelectedHandler} />
+      {/* <input type="file" ref="courseimage" className="form-control" placeholder="Image" required onChange={this.fileSelectedHandler} /> */}
+      {/* <UploadPreview /> */}
+      <section> 
+        <div className="form-group">
+        <input type="file" ref="courseimage" onChange={this.onChange} />
+       </div>
+
+        {this.state.file && (
+           <div className="card">
+          <div className="card-header">
+            <button className="btn btn-danger col-12" onClick={this.resetFile}><i className="fa fa-trash"></i> Delete</button>
+          </div>
+          <div className="card-body">
+        <img style={{ width: "100%" }} src={this.state.file} height="150px" />
+        </div>
+        </div>
+        )}
+
+      </section>
     </div>
     </div>
   </div>
@@ -229,10 +270,13 @@ const course = this.state.courseFormDatas.map((item, index) => {
 
 
     </div>
+          <div>
+
+            <div className="form-group">
         <div className="card">
           <div className="card-header">
             <div className="row col-12">
-              <div className="col-1">Course Id</div>
+              <div className="col-1">Id</div>
               <div className="col-2">Course Name</div>
               <div className="col-2">From Date</div>
               <div className="col-2">To Date</div>
@@ -247,10 +291,16 @@ const course = this.state.courseFormDatas.map((item, index) => {
             </div>
           </div>
         </div>
+          </div>
+
+          </div>
+
+
+
         </div>
         
         <Modal
-          courseid={modalData.courseid}
+          id={modalData.id}
           coursename={modalData.coursename}
           coursefromdate={modalData.coursefromdate}
           coursetodate={modalData.coursetodate}
@@ -258,11 +308,13 @@ const course = this.state.courseFormDatas.map((item, index) => {
           courseimage={modalData.courseimage}
           saveModalDetails={this.saveModalDetails}
         />
+      
       </div>
-    )
+   
+   </section>
+   )
     }
 }
-
 
 
 export default Courses;

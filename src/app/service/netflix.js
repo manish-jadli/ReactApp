@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Helmet} from 'react-helmet';
 import '../service/service.css';
 
 
@@ -24,9 +25,19 @@ class Netflix extends React.Component {
 
  render(){
   return (
+
+    <section>
+
+                <Helmet>
+                <title>NetFlix Service</title>
+                <meta charset="UTF-8" />
+                <meta name="description" content="MjTech Netflix Service" />
+                <meta name="keywords" content="Netflix Service, Netflix, MjTech" />
+                </Helmet>
+
     <section className="container">
          <div id="pageNotFound">
-    Netflix Service
+    <span>Netflix Service</span>
     </div>
     <section>
       <div>
@@ -38,6 +49,8 @@ class Netflix extends React.Component {
       })}
       </div>
     </section>
+</section>
+
 </section>
   );
 }

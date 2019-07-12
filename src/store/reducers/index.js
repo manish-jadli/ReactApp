@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
-import UserReducer from '../reducer/reducer-user';
-import ActiveUserReducer from '../reducer/reducer-active-user';
+import UserReducer from './reducer-user';
+import ActiveUserReducer from './reducer-active-user';
 
 const allReducers=combineReducers({
 users:UserReducer,

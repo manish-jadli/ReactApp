@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Helmet} from 'react-helmet';
 import '../home/home.css';
 //import homeData from '../../data/home.json';
 import company1 from '../../img/company1.jpg';
@@ -32,6 +33,17 @@ class Home extends React.Component {
   render(){
    //let datas=this.state.datas;
   return (
+
+<section>
+
+
+                <Helmet>
+                <title>Home</title>
+                <meta charset="UTF-8" />
+                <meta name="description" content="MjTech Home" />
+                <meta name="keywords" content="Home, Default, MjTech" />
+                </Helmet>
+
     <section>
 <div id="demo" className="carousel slide" data-ride="carousel">
 <ul className="carousel-indicators">
@@ -132,6 +144,8 @@ class Home extends React.Component {
 </section>
 <br/>
 <br/>
+
+</section>
 
 </section>
   );

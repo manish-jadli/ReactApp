@@ -1,13 +1,27 @@
-import React from 'react'
+import React from 'react';
+import {Helmet} from 'react-helmet';
 
 class RejectBooking extends React.Component{
     render(){
 
-        return( <section className="container">
+        return( 
+        <section>
+
+
+                <Helmet>
+                <title>Reject Booking</title>
+                <meta charset="UTF-8" />
+                <meta name="description" content="MjTech Reject Booking" />
+                <meta name="keywords" content="Reject Booking, MjTech" />
+                </Helmet>
+
+        <section className="container">
             <div id="pageNotFound">
-               Reject Booking
+               <span>Reject Booking</span>
                </div>
                <RejectDetail />
+
+            </section>
 
             </section>
         )

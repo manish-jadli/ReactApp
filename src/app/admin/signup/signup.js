@@ -8,6 +8,8 @@ class Signup extends React.Component {
 
         return (
 
+          <section>
+
             <section>
                   <div className="modal" id="signup">
   <form className="was-validated">
@@ -66,6 +68,8 @@ class Signup extends React.Component {
 
             </section>
 
+
+            </section>
             );
 
     }

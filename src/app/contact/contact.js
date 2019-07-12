@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import teacher from '../../img/angular.png';
+import {Helmet} from 'react-helmet';
+//import teacher from '../../img/angular.png';
 import '../contact/contact.css';
 import ContactAddEdit from './contactAddEdit';
 import {Dropdown} from 'react-bootstrap';
@@ -151,12 +152,21 @@ this.saveModalDetails=this.saveModalDetails.bind(this);
     const requiredItem=this.state.requiredItem;
     let modalData=this.state.datas[requiredItem];
   return (
+
+    <section>
+                <Helmet>
+                <title>Contact</title>
+                <meta charset="UTF-8" />
+                <meta name="description" content="MjTech Contact" />
+                <meta name="keywords" content="Contact, Contact Detail, MjTech" />
+                </Helmet>
+
     <section className="container">
  <div id="pageNotFound">
-    Contact us
+    <span>Contact us</span>
     </div>
 
-<div className="col-12 clearfix">
+{/* <div className="col-12 clearfix">
   <div className="col-12 clearfix">
   </div>
     <div>
@@ -180,58 +190,63 @@ this.saveModalDetails=this.saveModalDetails.bind(this);
         </div>
       </div>
     </div>
-</div>
-<div className="form-group col-12">
+</div> */}
+
+
+{/* <div className="form-group col-12">
   <b>Length of data: {this.state.datas.length}</b>
-</div>
+</div> */}
 <div className="form-group col-12">
 
 <form ref="myForm" className="myForm">
-<div className="form-group">
+<div className="row">
+
+<div className="form-group col-6">
     <label className="control-label"><b>Id:</b></label>
 <div className="form-group">
 <input type="number" className="form-control" ref="id" placeholder="Enter ID"/>
 </div>
 </div>
 
-  <div className="form-group">
+  <div className="form-group col-6">
     <label className="control-label"><b>Username:</b></label>
 <div className="form-group">
 <input type="text" className="form-control" ref="username" placeholder="Enter Username"/>
 </div>
 </div>
 
-<div className="form-group">
+<div className="form-group col-6">
     <label className="control-label"><b>Email:</b></label>
 <div className="form-group">
 <input type="email" className="form-control" ref="email" placeholder="Enter Username"/>
 </div>
 </div>
 
-<div className="form-group">
+<div className="form-group col-6">
   <label className="control-label"><b>Address:</b></label>
 <div className="form-group">
 <input type="text" className="form-control" ref="address" placeholder="Enter address"/>
 </div>
 </div>
 
-<div className="form-group">
+<div className="form-group col-6">
     <label className="control-label"><b>Feedback:</b></label>
 <div className="form-group">
 <textarea cols="4" rows="4" className="form-control" ref="feedback" placeholder="Enter Feedback"></textarea>
 </div>
 </div>
 
+</div>
 <div className="form-group">
 <button type="button" className="btn btn-success col-12" onClick={(e)=> this.fSubmit(e)}>Submit</button>
 </div>
-
 </form>
 <br/>
+
 <div className="card">
   <div className="card-header">
     <div className="row col-12">
-    <div className="col-1">id</div>
+    <div className="col-1">Id</div>
       <div className="col-2">Username</div>
       <div className="col-3">Email</div>
       <div className="col-2">Address</div>
@@ -255,6 +270,9 @@ this.saveModalDetails=this.saveModalDetails.bind(this);
           saveModalDetails={this.saveModalDetails}
         />
 </section>
+  
+  </section>
+  
   )
 }
 

@@ -1,8 +1,7 @@
 import React from 'react';
+import {Helmet} from 'react-helmet';
 import '../about/about.css';
 import aboutData from '../../data/about.json';
-
-
 
 
 class About extends React.Component{
@@ -20,14 +19,23 @@ class About extends React.Component{
       }
 
 
-
-
     render(){
 
   return (
+
+<section>
+
+                <Helmet>
+                <title>About</title>
+                <meta charset="UTF-8" />
+                <meta name="description" content="MjTech About" />
+                <meta name="keywords" content="About, About us, MjTech" />
+                </Helmet>
+
+
     <section className="container">
  <div id="pageNotFound">
-    About us
+    <span>About us</span>
     </div>
 
 <div className="col-12">
@@ -53,6 +61,9 @@ class About extends React.Component{
 
 
 </section>
+  
+  </section>
+  
   );
 }
 }

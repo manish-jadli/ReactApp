@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Helmet} from 'react-helmet';
 import '../service/service.css';
 
 
@@ -26,9 +27,18 @@ class Youtube extends React.Component {
  render(){
   return (
 
+    <section>
+
+                <Helmet>
+                <title>Youtube Service</title>
+                <meta charset="UTF-8" />
+                <meta name="description" content="MjTech Youtube Service" />
+                <meta name="keywords" content="Youtube, Youtube Service, MjTech" />
+                </Helmet>
+
     <section className="container">
          <div id="pageNotFound">
-         Youtube Service
+         <span>Youtube Service</span>
     </div>
 
     <div className="row col-12">
@@ -49,6 +59,8 @@ class Youtube extends React.Component {
 
     </div>
 
+
+</section>
 
 </section>
   );

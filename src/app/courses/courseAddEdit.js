@@ -6,7 +6,7 @@ class Modal extends React.Component {
         super(props);
         this.handleSave = this.handleSave.bind(this);
         this.state = {
-            courseid: '',
+            id: '',
             coursename: '',
             coursefromdate: '',
             coursetodate: '',
@@ -17,7 +17,7 @@ class Modal extends React.Component {
 
     componentWillReceiveProps(nextProps) {
         this.setState({
-            courseid: nextProps.courseid,
+            id: nextProps.id,
             coursename: nextProps.coursename,
             coursefromdate:nextProps.coursefromdate,
             coursetodate:nextProps.coursetodate,
@@ -26,8 +26,8 @@ class Modal extends React.Component {
         });
     }
 
-    courseidHandler(e) {
-        this.setState({ courseid: e.target.value });
+    idHandler(e) {
+        this.setState({ id: e.target.value });
     }
 
     coursenameHandler(e) {
@@ -57,6 +57,8 @@ courseimageHandler(e) {
 
     render() {
         return (
+            <section>
+
             <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
@@ -71,7 +73,7 @@ courseimageHandler(e) {
                             <div className="form-group">
                               <label className="control-label">Course Id:</label>
                             <div className="form-group">
-                            <input type="number" className="form-control" value={this.state.courseid} onChange={(e) => this.courseidHandler(e)} />
+                            <input type="number" className="form-control" value={this.state.id} onChange={(e) => this.idHandler(e)} />
                             </div>
                             </div>
 
@@ -118,6 +120,8 @@ courseimageHandler(e) {
                     </div>
                 </div>
             </div>
+        
+        </section>
         );
     }
 }

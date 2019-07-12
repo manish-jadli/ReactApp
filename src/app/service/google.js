@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Helmet} from 'react-helmet';
 import '../service/service.css';
 
 
@@ -28,9 +29,19 @@ class Google extends React.Component {
 
  render(){
   return (
+
+    <section>
+
+                <Helmet>
+                <title>Google Service</title>
+                <meta charset="UTF-8" />
+                <meta name="description" content="MjTech Google Service" />
+                <meta name="keywords" content="Google Service, Google, MjTech" />
+                </Helmet>
+
     <section className="container">
          <div id="pageNotFound">
-         Google Service
+         <span>Google Service</span>
         </div>
 
 <section>
@@ -40,6 +51,8 @@ class Google extends React.Component {
     </div>
     <List items={this.state.items}/>
   </div>
+</section>
+
 </section>
 
 </section>

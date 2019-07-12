@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from 'react-helmet';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Tabs, Tab} from 'react-bootstrap';
 import GetService from './getservice';
@@ -600,7 +601,7 @@ class Booking extends React.Component{
     
         this.refs.getserviceForm.reset();
 
-        this.props.history.push("/confirmBooking");
+        // this.props.history.push("/confirmBooking");
         console.log(this.state.shipfroms);
         console.log(this.state.shiptos);
         console.log(this.state.shipmentvias);
@@ -615,10 +616,104 @@ class Booking extends React.Component{
 
     render(){
         return(
+
+            <section>
+
+                <Helmet>
+                <title>Booking</title>
+                <meta charset="UTF-8" />
+                <meta name="description" content="MjTech Booking" />
+                <meta name="keywords" content="Booking, MjTech" />
+                </Helmet>
+
+
             <section className="container">
             <div id="pageNotFound">
-               Booking
+               <span>Booking</span>
                </div>
+
+<section className="row">
+
+            <div className="from-group col-6">
+                <div className="card">
+                <div className="card-header">Ship From Details:</div>
+            {this.state.shipfroms.map((shipfrom,i)=>
+            <div className="card-body" key={i}>
+                <div className="">{shipfrom.sfcountry}</div>
+                <div className="">{shipfrom.sfcompanyname}</div>
+                <div className="">{shipfrom.sfcompanyfirstname} {shipfrom.sfcompanylastname}</div>
+                <div className="">{shipfrom.sfaddress1} {shipfrom.sfaddress2}</div>
+                <div className="">{shipfrom.sfcity}</div>
+                <div className="">{shipfrom.sfarea}</div>
+                <div className="">{shipfrom.sftelephoneno}</div>
+                <div className="">{shipfrom.sfmail}</div>
+                </div>
+            )}
+                </div>
+                </div>
+
+            <div className="from-group col-6">
+                <div className="card">
+                <div className="card-header">Ship To Details:</div>
+            {this.state.shiptos.map((shipto,i)=>
+            <div className="card-body" key={i}>
+                <div className="">{shipto.stcountry}</div>
+                <div className="">{shipto.stcompanyname}</div>
+                <div className="">{shipto.stcompanyfirstname} {shipto.stcompanylastname}</div>
+                <div className="">{shipto.staddress1} {shipto.staddress2}</div>
+                <div className="">{shipto.stcity}</div>
+                <div className="">{shipto.starea}</div>
+                <div className="">{shipto.sttelephoneno}</div>
+                <div className="">{shipto.stmail}</div>
+                </div>
+            )}
+                </div>
+                </div>
+
+</section>
+
+<br/><br/>
+
+
+<section className="row">
+
+            <div className="from-group col-6">
+                <div className="card">
+                <div className="card-header">Shipment Via Details:</div>
+            {this.state.shipmentvias.map((shipmentvia,i)=>
+            <div className="card-body" key={i}>
+                <div className="">{shipmentvia.svshipmentid}</div>
+                <div className="">{shipmentvia.svshipmentby}</div>
+                <div className="">{shipmentvia.svplacefrom}</div>
+                <div className="">{shipmentvia.svplaceto}</div>
+                <div className="">{shipmentvia.svextracharges}</div>
+                </div>
+            )}
+                </div>
+                </div>
+
+            <div className="from-group col-6">
+                <div className="card">
+                <div className="card-header">Shipment Details:</div>
+            {this.state.shipmentdetails.map((shipmentdetail,i)=>
+            <div className="card-body" key={i}>
+                <div className="">{shipmentdetail.sdpaymentparty}</div>
+                <div className="">{shipmentdetail.sdshipmentby}</div>
+                <div className="">{shipmentdetail.sdparceltype}</div>
+                <div className="">{shipmentdetail.sdcurrency}</div>
+                <div className="">{shipmentdetail.sdshipmentreference}</div>
+                </div>
+            )}
+                </div>
+                </div>
+
+</section>
+
+
+
+
+
+                <br/><br/>
             <GetService />
             <ClearGetService />
             <AddressBook />
@@ -628,7 +723,7 @@ class Booking extends React.Component{
                    <header>
                        <div>
                         <div>
-                            <div className="col-12 row">
+                            <div className="row">
                                 <div className="col-6">
                                 <Tabs id="controlled-tab-example" className="bookingHeader" activeKey={this.state.key} onSelect={key => this.setState({ key })}>
         <Tab eventKey="home" title="ShipFrom">
@@ -991,6 +1086,8 @@ class Booking extends React.Component{
                 </section>
             </form>
             </section>
+
+           </section> 
         )
     }
 

@@ -34,6 +34,9 @@ class AddressBook extends React.Component{
 
         return(
 <section>
+
+
+<section>
   <AddNewAddres />
   <div className="modal" id="addressBook">
   <form>
@@ -116,7 +119,10 @@ class AddressBook extends React.Component{
   
 
             </section>
-        )
+       
+       </section>
+       
+       )
     }
 }
 
